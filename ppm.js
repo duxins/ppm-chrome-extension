@@ -8,17 +8,17 @@ function init(cfg){
 
 	$( ".tb-prop" ).delegate( "li", "click", function() {
 
+		var result;
 		var data = [];
 
 		$('.tb-selected').each(function(){
-			if ($(this).data('value')) {
-				data.push($(this).data('value'));
+			var value = $(this).data('value');
+			if (value && value.indexOf('-') === -1) {
+				data.push(value);
 			};
 		});
 
 		if(data.length == 0) return;
-
-		var result;
 
 		for(var sku in skuMap){
 			var found = true;
