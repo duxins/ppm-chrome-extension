@@ -1,13 +1,14 @@
 {
    "content_scripts": [ {
       "js": [ "jquery.min.js", "ppm.js" ],
-      "matches": [ "http://detail.tmall.com/*"],
+      "matches": [ "http://detail.tmall.com/*", "http://store.meizu.com/*"],
       "run_at": "document_end"
    } ],
+   "update_url": "http://ppm.avosapps.com/update.xml",
    "description": "",
    "manifest_version": 2,
    "name": "PPM",
-   "permissions": [ "storage", "http://detail.tmall.com/*"],
+   "permissions": [ "storage", "http://detail.tmall.com/*", "http://store.meizu.com/*"],
    "short_name": "PPM",
-   "version": "0.1"
+   "version": "0.2"
 }
