@@ -5,10 +5,15 @@
       "run_at": "document_end"
    } ],
    "update_url": "http://ppm.avosapps.com/update.xml",
+   "icons": {
+      "16": "ppm.png",
+      "48": "ppm.png",
+      "128": "ppm.png"
+   },
    "description": "",
    "manifest_version": 2,
    "name": "PPM",
    "permissions": [ "storage", "http://detail.tmall.com/*", "http://store.meizu.com/*"],
    "short_name": "PPM",
-   "version": "0.3"
+   "version": "0.4"
 }
