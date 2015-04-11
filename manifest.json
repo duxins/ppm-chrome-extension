@@ -10,5 +10,5 @@
    "name": "PPM",
    "permissions": [ "storage", "http://detail.tmall.com/*", "http://store.meizu.com/*"],
    "short_name": "PPM",
-   "version": "0.2"
+   "version": "0.3"
 }

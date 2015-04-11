@@ -12,7 +12,7 @@ var Tmall = (function(){
 
 			$('.tb-selected').each(function(){
 				var value = $(this).data('value');
-				if (value && value.indexOf('-') === -1) {
+				if (typeof(value) == 'string'  && value.indexOf('-') === -1) {
 					data.push(value);
 				};
 			});
@@ -46,7 +46,7 @@ var Tmall = (function(){
 	function buildProductURL(skuId){
 		var match = location.href.match(/id=(\d+)/);
 		var id = match[1];
-		var product_url = 'http://detail.tmall.com/item.html?id=' + id + '&skuId=' + skuId;
+		var product_url = 'http://detail.tmall.com/item.htm?id=' + id + '&skuId=' + skuId;
 		return product_url;
 	}
 
