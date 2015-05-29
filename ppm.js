@@ -82,10 +82,35 @@ var Meizu = (function(){
 })();
 
 
+// 三星官网
+
+var Samsung = (function(){
+    function printSku(){
+        var skuId = $('#chageModelCode').val()
+
+        if($('#ppm-sku').size() == 0){
+            $('#eCommerceFlagPopup').after('<div id="ppm-sku">skuId: <span style="color:red; margin-left:30px;" id="ppm-sku-id"></span></div>');
+        }   
+
+        $('#ppm-sku-id').html(skuId);
+    }
+
+    return {
+        start: function(){
+            setInterval(function(){
+                printSku()
+            }, 1000);
+       }
+    }
+})();
+
+
 if (location.href.indexOf('detail.tmall.com') !== -1){
 	Tmall.start();
 }else if(location.href.indexOf('store.meizu') !== -1){
 	Meizu.start();
+}else if(location.href.indexOf('www.samsung.com') !== -1){
+    Samsung.start();
 }
 
 
