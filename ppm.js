@@ -46,7 +46,7 @@ var Tmall = (function(){
 	function buildProductURL(skuId){
 		var match = location.href.match(/id=(\d+)/);
 		var id = match[1];
-		var product_url = 'http://detail.tmall.com/item.htm?id=' + id + '&skuId=' + skuId;
+		var product_url = 'https://detail.tmall.com/item.htm?id=' + id + '&skuId=' + skuId;
 		return product_url;
 	}
 
